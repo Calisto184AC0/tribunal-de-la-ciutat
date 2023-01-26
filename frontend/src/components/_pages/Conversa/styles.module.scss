@@ -1,0 +1,25 @@
+.conversa {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    padding: 40px 30px 120px;
+
+    background-color: var(--salmon);
+    color: var(--purple);
+
+    & > h1 {
+        text-align: right;
+    }
+
+    .content {
+        h2 {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .text + .text {
+            text-indent: 60px;
+        }
+    }
+}

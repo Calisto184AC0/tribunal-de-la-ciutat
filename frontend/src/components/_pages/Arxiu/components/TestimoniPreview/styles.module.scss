@@ -1,0 +1,59 @@
+.testimoni_preview {
+    position: relative;
+
+    cursor: pointer;
+
+    .cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        //transition: all 0.3s ease-in-out;
+    }
+
+    .without_avatar {
+        background-color: var(--orange);
+        color: var(--purple);
+    }
+
+    .with_avatar {
+        background-color: var(--purple);
+        color: var(--orange);
+    }
+
+    .presentacion_img {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .avatar_img {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+
+        max-width: 140px;
+        max-height: 180px;
+
+        border-radius: 8px;
+        border: 2px solid var(--purple);
+
+        object-fit: cover;
+    }
+
+    &:hover {
+        .cover {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

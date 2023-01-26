@@ -1,0 +1,34 @@
+.download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 44px;
+    gap: 10px;
+
+    background-color: var(--purple);
+    border-radius: 200px;
+    border: none;
+
+    cursor: pointer;
+
+    color: var(--light-gray);
+
+    &:hover {
+        background-color: var(--light-gray);
+        color: var(--purple);
+
+        &::after {
+            content: '↓';
+            font-family: initial;
+        }
+    }
+
+    @media (width < 768px) {
+        padding: 66px;
+
+        &::after {
+            content: '↓';
+            font-family: initial;
+        }
+    }
+}

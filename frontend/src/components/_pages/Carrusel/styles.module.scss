@@ -1,0 +1,21 @@
+.carrusel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    height: 100%;
+
+    overflow-y: scroll;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,44 @@
+.player {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 10px;
+
+    padding: 10px 30px 10px 10px;
+
+    border-radius: 90px;
+    background-color: var(--light-gray);
+
+    .duration {
+        --duration: 0%;
+
+        position: relative;
+
+        height: 6px;
+
+        border-radius: 90px;
+        background-color: var(--gray);
+
+        cursor: pointer;
+
+        transition: height 0.2s ease;
+
+        &:hover {
+            height: 10px;
+        }
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            height: 100%;
+            width: var(--duration);
+
+            border-radius: 90px;
+            background-color: var(--purple);
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.carta_container {
+    padding: 40px 30px;
+
+    color: var(--purple);
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    h1,
+    h2 {
+        text-align: center;
+    }
+
+    .text_block {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .time_stamp {
+        white-space: pre-line;
+    }
+}

@@ -1,0 +1,8 @@
+.item {
+    cursor: pointer;
+    color: var(--white);
+
+    &:hover {
+        color: var(--purple);
+    }
+}

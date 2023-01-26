@@ -1,0 +1,44 @@
+.bg_transparent {
+    background-color: transparent !important;
+}
+
+.logo_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--purple);
+
+    cursor: pointer;
+
+    transition: background-color 0.7s ease;
+}
+
+.small_purple {
+    top: 20px !important;
+    transform: translate(-50%, 0) !important;
+
+    width: clamp(9.375rem, 6.6176rem + 12.2549vw, 12.5rem) !important;
+
+    fill: var(--purple) !important;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+
+    width: clamp(12.5rem, -2.0833rem + 64.8148vw, 56.25rem);
+
+    fill: var(--white);
+
+    cursor: pointer;
+
+    transition: all 0.7s ease;
+}

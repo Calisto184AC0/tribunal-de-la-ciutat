@@ -1,0 +1,17 @@
+.layout {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    justify-items: stretch;
+    align-items: stretch;
+
+    min-height: 100vh;
+    max-height: 100vh;
+
+    overflow-y: hidden;
+
+    @media (width < 768px) {
+        display: block;
+
+        overflow-y: auto;
+    }
+}

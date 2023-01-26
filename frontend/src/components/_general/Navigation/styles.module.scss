@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 0;
+
+    writing-mode: vertical-rl;
+}
+
+.nav_left {
+    background-color: var(--salmon);
+}
+
+.nav_right {
+    background-color: var(--orange);
+}

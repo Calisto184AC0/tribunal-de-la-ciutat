@@ -4,5 +4,5 @@ module.exports = ({ env }) => ({
   app: {
     keys: env.array("APP_KEYS"),
   },
-  url: env("NODE_ENV") === "production" ? env("URL") : undefined,
+  url: env("URL"),
 });

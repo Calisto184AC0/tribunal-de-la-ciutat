@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    padding: 40px 30px;
+
+    background-color: var(--gray);
+    color: var(--purple);
+
+    .downloads {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+}

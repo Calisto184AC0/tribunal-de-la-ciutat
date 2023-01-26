@@ -1,0 +1,46 @@
+.etiqueta {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+
+    @media (width < 768px) {
+        font-size: 24px;
+    }
+}
+
+.nav_item {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+
+    text-transform: uppercase;
+}
+
+.normal,
+.sangria {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.sangria {
+    text-indent: 60px;
+}
+
+.pequeno {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 9px;
+    line-height: 14px;
+}
+
+.extracto {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+}

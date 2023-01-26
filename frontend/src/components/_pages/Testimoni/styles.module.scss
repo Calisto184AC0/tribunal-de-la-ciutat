@@ -1,0 +1,42 @@
+.testimoni_container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    padding: 40px 30px;
+
+    color: var(--purple);
+
+    .close {
+        text-align: right;
+        cursor: pointer;
+    }
+
+    .text_center {
+        text-align: center;
+    }
+
+    .foto_destacada {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .extract {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+}

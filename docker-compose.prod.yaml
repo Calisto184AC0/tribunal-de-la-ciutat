@@ -5,26 +5,30 @@ services:
     build: 
       context: ./strapi
       dockerfile: Dockerfile.prod
-      args:
-        JWT_SECRET: ${JWT_SECRET}
-        ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
-        APP_KEYS: ${APP_KEYS}
-        NODE_ENV: production
-        HOST: ${HOST}
-        PORT: ${PORT}
-        URL: ${URL}
     ports:
       - "1338:1338"
     restart: unless-stopped
-    env_file:
-      - .env
     volumes:
       - ./strapi/config:/opt/app/config
       - ./strapi/src:/opt/app/src
       - ./strapi/package.json:/opt/package.json
       - ./strapi/package-lock.json:/opt/package-lock.json
       - ./strapi/.tmp:/opt/app/.tmp
-      - ./.env:/opt/app/.env
+      - ./strapi/.env:/opt/app/.env
+    networks:
+      - strapi-network
+
+  frontend:
+    container_name: tribunal-nextjs-prod
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+    restart: always
+    ports:
+      - 3000:3000
     networks:
       - strapi-network
 

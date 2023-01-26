@@ -1,0 +1,30 @@
+.arxiu {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    padding: 40px 30px 0;
+
+    background-color: var(--gray);
+    color: var(--purple);
+
+    .tags_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+
+        .tag_group {
+            display: flex;
+            justify-items: center;
+            gap: 6px;
+        }
+    }
+
+    .testimonis_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        margin: 0 -30px;
+    }
+}

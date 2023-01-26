@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    padding: 60px 30px 120px;
+
+    color: var(--purple);
+
+    h1 {
+        text-align: right;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .imagen {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+
+            border-radius: 10px;
+        }
+
+        span {
+            text-align: center;
+        }
+    }
+
+    .text_block {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        p + p {
+            margin-top: -20px;
+            text-indent: 60px;
+        }
+    }
+}
