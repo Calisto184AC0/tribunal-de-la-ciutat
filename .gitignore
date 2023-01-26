@@ -81,7 +81,7 @@ strapi/ssl
 strapi/.idea
 strapi/nbproject
 strapi/public/uploads/*
-strapi/!public/uploads/.gitkeep
+!strapi/public/uploads/.gitkeep
 
 ############################
 # Node.js
