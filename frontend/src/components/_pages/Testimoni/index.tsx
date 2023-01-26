@@ -36,7 +36,7 @@ const Testimoni = ({
                 {name}
             </Heading>
             <Image
-                src={`http://localhost:1338${foto.url}`}
+                src={`http://host.docker.internal:1338${foto.url}`}
                 alt={`Foto destacada de ${name}`}
                 width={foto.width}
                 height={foto.height}

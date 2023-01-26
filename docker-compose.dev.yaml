@@ -16,12 +16,20 @@ services:
       - ./strapi/.tmp:/opt/app/.tmp
       - ./strapi/.env:/opt/app/.env
     networks:
-      - strapi-network
+      strapi_network:
+        aliases:
+          - strapi
+
   frontend:
     container_name: tribunal-nextjs-dev
     build:
       context: ./frontend
       dockerfile: Dockerfile.dev
+      #args:
+      #  - STRAPI_HOST=tribunal-strapi-dev
+    environment:
+      - NODE_ENV=development
+      - STRAPI_HOST=strapi
     volumes:
       - ./frontend/src:/app/src
       - ./frontend/public:/app/public
@@ -29,12 +37,18 @@ services:
     ports:
       - 3000:3000
     networks:
-      - strapi-network
+      strapi_network:
+        aliases:
+          - frontend
+    depends_on:
+      - strapi
 
 volumes:
     strapi-data:
 
 networks:
-  strapi-network:
-    name: Strapi
+  strapi_network:
+    name: StrapiNet
     driver: bridge
+    ipam:
+      driver: default

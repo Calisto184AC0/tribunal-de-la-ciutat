@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_audios",
+  "info": {
+    "singularName": "home-audio",
+    "pluralName": "home-audios",
+    "displayName": "Home audio"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "audios": {
+      "allowedTypes": [
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

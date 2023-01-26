@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_content_introductions",
+  "info": {
+    "displayName": "introduction",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

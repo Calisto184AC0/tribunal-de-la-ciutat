@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_content_extracts",
+  "info": {
+    "displayName": "extract",
+    "icon": "volume-down"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sound": {
+      "allowedTypes": [
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

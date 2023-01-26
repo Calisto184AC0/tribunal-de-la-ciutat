@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimoni_tags",
+  "info": {
+    "singularName": "testimoni-tag",
+    "pluralName": "testimoni-tags",
+    "displayName": "Testimoni tag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "tag_id": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}

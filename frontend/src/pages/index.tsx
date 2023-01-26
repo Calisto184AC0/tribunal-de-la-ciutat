@@ -55,6 +55,8 @@ const initialStateMobile = {
 }
 
 const Home = () => {
+    console.log(process.env.NODE_ENV, process.env.STRAPI_HOST)
+
     const router = useRouter()
 
     const isMobile = useIsMobile()

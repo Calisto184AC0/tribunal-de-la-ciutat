@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chapter_tags",
+  "info": {
+    "singularName": "chapter-tag",
+    "pluralName": "chapter-tags",
+    "displayName": "Chapter tag"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "tag_id": {
+      "type": "uid",
+      "targetField": "label",
+      "required": true
+    }
+  }
+}

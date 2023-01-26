@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_content_text_blocks",
+  "info": {
+    "displayName": "text block",
+    "icon": "paragraph",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "chapter_tag": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::chapter-tag.chapter-tag"
+    }
+  }
+}

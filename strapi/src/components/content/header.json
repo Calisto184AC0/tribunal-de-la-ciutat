@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_content_headers",
+  "info": {
+    "displayName": "header",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "timestamp": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

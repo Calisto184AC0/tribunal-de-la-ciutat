@@ -8,7 +8,7 @@ const useCarrusel = () => {
     const fetchStrapi = async () => {
         try {
             const response = await fetch(
-                `http://localhost:1338/api/carrusel/?populate%5Bcarrusel%5D%5Bpopulate%5D=image`,
+                `http://strapi:1338/api/carrusel/?populate%5Bcarrusel%5D%5Bpopulate%5D=image`,
                 {
                     method: 'GET',
                     headers: {
@@ -30,7 +30,7 @@ const useCarrusel = () => {
                             return (
                                 <Image
                                     key={imgId}
-                                    src={`http://localhost:1338${url}`}
+                                    src={`http://host.docker.internal:1338${url}`}
                                     alt={'imagen'}
                                     width={width}
                                     height={height}
