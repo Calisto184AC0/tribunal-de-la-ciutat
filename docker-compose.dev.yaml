@@ -1,0 +1,46 @@
+version: '3'
+services:
+  strapi:
+    container_name: tribunal-strapi-dev
+    build: 
+      context: ./strapi
+      dockerfile: Dockerfile.dev
+      args:
+        JWT_SECRET: ${JWT_SECRET}
+        ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+        APP_KEYS: ${APP_KEYS}
+        NODE_ENV: development
+        HOST: ${HOST}
+        PORT: ${PORT}
+    #image: tribunal-strapi
+    ports:
+      - "1338:1338"
+    restart: unless-stopped
+    env_file:
+      - .env
+    # environment:
+    #   DATABASE_CLIENT: ${DATABASE_CLIENT}
+    #   JWT_SECRET: ${JWT_SECRET}
+    #   ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+    #   APP_KEY: ${APP_KEY}
+    #   NODE_ENV: development
+    #   URL: ${URL}
+    #   HOST: ${HOST}
+    #   PORT: ${PORT}
+    volumes:
+      - ./strapi/config:/opt/app/config
+      - ./strapi/src:/opt/app/src
+      - ./strapi/package.json:/opt/package.json
+      - ./strapi/package-lock.json:/opt/package-lock.json
+      - ./strapi/.tmp:/opt/app/.tmp
+      - ./.env:/opt/app/.env
+    networks:
+      - strapi-network
+
+volumes:
+    strapi-data:
+
+networks:
+  strapi-network:
+    name: Strapi
+    driver: bridge
