@@ -1,5 +1,5 @@
-import MarkdownRender from '@/components/_general/MarkdownRender'
 import { Button, Heading } from '@/components/_ui'
+import Footer from '@/components/_ui/Footer'
 import PageContainer from '@/components/_ui/PageContainer'
 import { useIsMobile } from '@/contexts/isMobileContext'
 import { PageId } from '@/hooks/useContentReducer/types'
@@ -59,7 +59,7 @@ const Arxiu = ({ transition, returnHandler }: ArxiuProps) => {
             if (auxRow.length === cont) {
                 testimoniTagsParsed.push(auxRow)
                 auxRow = []
-                cont = 3
+                cont = cont === 3 ? 4 : 3
             }
 
             if (testimoniTagsAPI.length === 1) {
@@ -80,14 +80,14 @@ const Arxiu = ({ transition, returnHandler }: ArxiuProps) => {
                     {arxiuContent.data.attributes.title}
                 </Heading>
             )}
-            <MarkdownRender
+            {/* <MarkdownRender
                 source={arxiuContent?.data.attributes.introduction}
                 components={{
                     h1: ({ node, ...props }) => (
                         <Heading type='h4' tag='h1' {...props} />
                     ),
                 }}
-            />
+            /> */}
             <div className={styles.tags_container}>
                 {tags?.map((tagGroup, index) => (
                     <div className={styles.tag_group} key={index}>
@@ -201,6 +201,7 @@ const Arxiu = ({ transition, returnHandler }: ArxiuProps) => {
                     }
                 )}
             </div>
+            <Footer />
         </PageContainer>
     )
 }

@@ -1,6 +1,8 @@
 import { MarkdownRender } from '@/components/_general'
 import useStrapi from '@/hooks/useStrapi'
 import Image from 'next/image'
+import Text from '../Text'
+import styles from './styles.module.scss'
 import { Footer } from './type'
 
 const Footer = () => {
@@ -9,10 +11,21 @@ const Footer = () => {
     if (!content) return <p>Cargando...</p>
 
     return (
-        <footer className='footer'>
-            <MarkdownRender source={content.data.attributes.content} />
-            <div className='logos'>
-                <div className='logos_izq'>
+        <footer className={styles.footer}>
+            <MarkdownRender
+                components={{
+                    p: ({ node, ...props }) => (
+                        <Text
+                            className={styles.p_block}
+                            type='pequeno'
+                            {...props}
+                        />
+                    ),
+                }}
+                source={content.data.attributes.content}
+            />
+            <div className={styles.logos}>
+                <div className={styles.logos_izq}>
                     {content.data.attributes.logos_izq.data.map(
                         ({ attributes: { height, url, width, name }, id }) => (
                             <Image
@@ -44,3 +57,5 @@ const Footer = () => {
         </footer>
     )
 }
+
+export default Footer

@@ -2,7 +2,7 @@ export interface ChapterTags {
     data: ChapterTagData[]
 }
 
-interface ChapterTagData {
+export interface ChapterTagData {
     id: number
     attributes: ChapterTagAttributes
 }

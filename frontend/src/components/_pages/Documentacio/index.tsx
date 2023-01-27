@@ -1,5 +1,6 @@
 import { MarkdownRender } from '@/components/_general'
 import { DownloadButton, Heading } from '@/components/_ui'
+import Footer from '@/components/_ui/Footer'
 import PageContainer from '@/components/_ui/PageContainer'
 import { useIsMobile } from '@/contexts/isMobileContext'
 import useStrapi from '@/hooks/useStrapi'
@@ -40,6 +41,7 @@ const Documentacio = () => {
                     )
                 )}
             </div>
+            <Footer />
         </PageContainer>
     )
 }

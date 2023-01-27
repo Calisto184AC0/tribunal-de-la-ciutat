@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    padding: 120px 30px 40px;
+
+    background-color: var(--gray);
+    color: var(--purple);
+
+    .p_block {
+        display: block;
+        max-width: 300px;
+        width: 100px;
+    }
+
+    .logos {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .logos_izq {
+            display: flex;
+            gap: 20px;
+        }
+    }
+}

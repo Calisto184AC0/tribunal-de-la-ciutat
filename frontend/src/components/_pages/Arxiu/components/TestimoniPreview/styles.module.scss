@@ -3,6 +3,30 @@
 
     cursor: pointer;
 
+    @media (width <= 768px) {
+        .cover {
+            visibility: visible;
+            top: auto;
+            right: auto;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            padding: 2rem;
+
+            border-radius: 60px;
+
+            font-size: 38px;
+            line-height: 30px;
+        }
+
+        .without_avatar,
+        .with_avatar {
+            background-color: var(--light-gray);
+            color: var(--purple);
+        }
+    }
+
     .cover {
         position: absolute;
         top: 0;

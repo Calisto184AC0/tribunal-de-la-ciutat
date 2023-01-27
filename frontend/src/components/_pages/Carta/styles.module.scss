@@ -7,6 +7,12 @@
     flex-direction: column;
     gap: 60px;
 
+    scroll-behavior: smooth;
+
+    @media (width < 768px) {
+        padding: 260px 20px 90px;
+    }
+
     h1,
     h2 {
         text-align: center;
@@ -29,7 +35,14 @@
         transform: translateX(-50%);
 
         display: flex;
-        gap: 8px;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+
+        .controler_audio_row {
+            display: flex;
+            gap: 8px;
+        }
 
         a {
             display: flex;
