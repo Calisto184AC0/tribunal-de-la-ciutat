@@ -27,7 +27,7 @@ const AudioPlayer = ({ src }: AudioPlayerProps) => {
     }
 
     useEffect(() => {
-        const audio = new Audio(`${process.env.HOST_STRAPI}${src}`)
+        const audio = new Audio(`http://tribunal.vigla.city/strapi${src}`)
         audio.onended = () => {
             setIsPlaying(false)
             if (intervalRef.current) {

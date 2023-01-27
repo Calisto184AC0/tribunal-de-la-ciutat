@@ -9,7 +9,7 @@ interface DownloadButtonProps {
 
 const DownloadButton = ({ label, fileName, fileData }: DownloadButtonProps) => {
     const downloadFile = () => {
-        fetch(`${process.env.HOST_STRAPI}${fileData}`)
+        fetch(`http://tribunal.vigla.city/strapi${fileData}`)
             .then(response => response.blob())
             .then(blob => {
                 const url = window.URL.createObjectURL(new Blob([blob]))

@@ -13,7 +13,7 @@ const contentMap = {
     informacio: '/informacio?populate%5Bmore_content%5D%5Bpopulate%5D=*',
 }
 
-const STRAPI_URL_BASE = '${process.env.HOST_STRAPI}/api'
+const STRAPI_URL_BASE = 'http://tribunal.vigla.city/strapi/api'
 
 type ContentId =
     | 'carrusel'

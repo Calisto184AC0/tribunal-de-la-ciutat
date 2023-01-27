@@ -8,7 +8,7 @@ const useCarrusel = () => {
     const fetchStrapi = async () => {
         try {
             const response = await fetch(
-                `${process.env.HOST_STRAPI}/api/carrusel/?populate%5Bcarrusel%5D%5Bpopulate%5D=image`,
+                `http://tribunal.vigla.city/strapi/api/carrusel/?populate%5Bcarrusel%5D%5Bpopulate%5D=image`,
                 {
                     method: 'GET',
                     headers: {
@@ -30,7 +30,7 @@ const useCarrusel = () => {
                             return (
                                 <Image
                                     key={imgId}
-                                    src={`${process.env.HOST_STRAPI}${url}`}
+                                    src={`http://tribunal.vigla.city/strapi${url}`}
                                     alt={'imagen'}
                                     width={width}
                                     height={height}

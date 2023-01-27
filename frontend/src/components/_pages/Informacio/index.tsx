@@ -40,7 +40,7 @@ const Informacio = () => {
                                     }) => (
                                         <Image
                                             key={`${__component}-img-${id}`}
-                                            src={`${process.env.HOST_STRAPI}${url}`}
+                                            src={`http://tribunal.vigla.city/strapi${url}`}
                                             alt={caption!}
                                             width={width}
                                             height={height}

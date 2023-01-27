@@ -36,7 +36,7 @@ const Testimoni = ({
                 {name}
             </Heading>
             <Image
-                src={`${process.env.HOST_STRAPI}${foto.url}`}
+                src={`http://tribunal.vigla.city/strapi${foto.url}`}
                 alt={`Foto destacada de ${name}`}
                 width={foto.width}
                 height={foto.height}
@@ -67,7 +67,7 @@ const Testimoni = ({
                                     return (
                                         <Image
                                             key={`${name}-${id}`}
-                                            src={`${process.env.HOST_STRAPI}${url}`}
+                                            src={`http://tribunal.vigla.city/strapi${url}`}
                                             alt={`Foto`}
                                             width={width}
                                             height={height}

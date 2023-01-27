@@ -22,7 +22,7 @@ const TestimoniPreview = ({
     return (
         <div className={styles.testimoni_preview} {...props}>
             <Image
-                src={`${process.env.HOST_STRAPI}${photos.presentacion.url}`}
+                src={`http://tribunal.vigla.city/strapi${photos.presentacion.url}`}
                 alt={`Foto de presentación de ${name}`}
                 width={photos.presentacion.width}
                 height={photos.presentacion.height}
@@ -30,7 +30,7 @@ const TestimoniPreview = ({
             />
             {photos.avatar && (
                 <Image
-                    src={`${process.env.HOST_STRAPI}${photos.avatar.url}`}
+                    src={`http://tribunal.vigla.city/strapi${photos.avatar.url}`}
                     alt={`Foto avatar de ${name}`}
                     width={photos.avatar.width}
                     height={photos.avatar.height}
