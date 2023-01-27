@@ -4,7 +4,7 @@ const fetcher = (url: string) =>
     fetch(url, {
         method: 'GET',
         headers: {
-            Authorization: `Bearer c2e5d9331e4aaa09cd34fef09cf7b13978cb5fb76392e3452632026d3e0b49ac480b913898279a5b56abead8484f5b345fbd47c7eb7cc117c389bc57f80c73445350a9619a05736a0254e44fdb7fe388a39366188d4f961994d4551f663f6dd6ce4445befd4aa59df0432c0bf12f04eccb1000a4ed2a9f5347d1383592cdb1a6`,
+            Authorization: `Bearer bec529958f1f94ce19e763a77254d2f65c800b47ab08bd256a5c771694b03e4dff0361aa6c54babb0faa4835c9c12e053409604d335b502021ca8576009a3d6ef7217a55fa6f2533b06e1bd76e1f16caf58c02e5eb45c37946e053ca110c403b449675f8ab344731ba3c7da8fab3324a1d353ca36eee971c20f46409139d2e3d`,
         },
     }).then(res => res.json())
 
