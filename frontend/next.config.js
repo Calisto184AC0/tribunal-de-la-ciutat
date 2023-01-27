@@ -3,7 +3,7 @@ const nextConfig = {
     reactStrictMode: true,
     output: 'standalone',
     images: {
-        domains: ['localhost', 'host.docker.internal'],
+        domains: ['localhost', 'host.docker.internal', 'tribunal.vigla.city'],
     },
 }
 

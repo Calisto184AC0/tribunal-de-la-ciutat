@@ -17,7 +17,7 @@ const Conversa = () => {
                 {content.data.attributes.title}
             </Heading>
             <VideoPlayer
-                videoUrl={`http://localhost:1338${content.data.attributes.video.data.attributes.url}`}
+                videoUrl={`${process.env.HOST_STRAPI}${content.data.attributes.video.data.attributes.url}`}
                 caption={content.data.attributes.video_caption}
             />
             <div className={styles.content}>

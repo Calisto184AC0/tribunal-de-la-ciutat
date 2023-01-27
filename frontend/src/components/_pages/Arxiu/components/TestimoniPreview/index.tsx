@@ -22,7 +22,7 @@ const TestimoniPreview = ({
     return (
         <div className={styles.testimoni_preview} {...props}>
             <Image
-                src={`http://host.docker.internal:1338${photos.presentacion.url}`}
+                src={`${process.env.HOST_STRAPI}${photos.presentacion.url}`}
                 alt={`Foto de presentación de ${name}`}
                 width={photos.presentacion.width}
                 height={photos.presentacion.height}
@@ -30,7 +30,7 @@ const TestimoniPreview = ({
             />
             {photos.avatar && (
                 <Image
-                    src={`http://host.docker.internal:1338${photos.avatar.url}`}
+                    src={`${process.env.HOST_STRAPI}${photos.avatar.url}`}
                     alt={`Foto avatar de ${name}`}
                     width={photos.avatar.width}
                     height={photos.avatar.height}

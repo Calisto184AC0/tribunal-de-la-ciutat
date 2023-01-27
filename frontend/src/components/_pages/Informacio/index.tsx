@@ -40,7 +40,7 @@ const Informacio = () => {
                                     }) => (
                                         <Image
                                             key={`${__component}-img-${id}`}
-                                            src={`http://localhost:1338${url}`}
+                                            src={`${process.env.HOST_STRAPI}${url}`}
                                             alt={caption!}
                                             width={width}
                                             height={height}

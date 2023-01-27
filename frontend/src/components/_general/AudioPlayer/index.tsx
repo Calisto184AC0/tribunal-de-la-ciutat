@@ -27,7 +27,7 @@ const AudioPlayer = ({ src }: AudioPlayerProps) => {
     }
 
     useEffect(() => {
-        const audio = new Audio(`http://localhost:1338${src}`)
+        const audio = new Audio(`${process.env.HOST_STRAPI}${src}`)
         audio.onended = () => {
             setIsPlaying(false)
             if (intervalRef.current) {

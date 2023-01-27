@@ -9,7 +9,7 @@ interface DownloadButtonProps {
 
 const DownloadButton = ({ label, fileName, fileData }: DownloadButtonProps) => {
     const downloadFile = () => {
-        fetch(`http://localhost:1338${fileData}`)
+        fetch(`${process.env.HOST_STRAPI}${fileData}`)
             .then(response => response.blob())
             .then(blob => {
                 const url = window.URL.createObjectURL(new Blob([blob]))
