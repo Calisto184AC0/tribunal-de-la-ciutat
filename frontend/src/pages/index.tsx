@@ -17,6 +17,7 @@ import {
 } from '@/components/_pages'
 import ArxiuConversa from '@/components/_pages/ArxiuConversa'
 import { Logo } from '@/components/_ui'
+import PageContainer from '@/components/_ui/PageContainer'
 import { useIsMobile } from '@/contexts/isMobileContext'
 import useContentReducer from '@/hooks/useContentReducer'
 import { PageId } from '@/hooks/useContentReducer/types'
@@ -206,10 +207,15 @@ const Home = () => {
                         onClick={() => {
                             transition(
                                 PageId.InformacioDocumentacio,
-                                <>
+                                <PageContainer
+                                    style={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                    }}
+                                >
                                     <Informacio />
                                     <Documentacio />
-                                </>
+                                </PageContainer>
                             )
                         }}
                     />

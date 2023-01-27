@@ -5,14 +5,28 @@ import PageContainer from '@/components/_ui/PageContainer'
 import useStrapi from '@/hooks/useStrapi'
 import styles from './styles.module.scss'
 import { Carta } from './types'
+import { Audios } from './types/audios'
+import { ChapterTags } from './types/chapter-tags'
 
 const Carta = () => {
     const { content } = useStrapi<Carta>('carta')
+    const { content: tagsContent } = useStrapi<ChapterTags>('chapter_tags')
+    const { content: audiosContent } = useStrapi<Audios>('audios')
 
-    if (!content?.data) return <p>Cargando...</p>
+    if (!content?.data || !tagsContent?.data || !audiosContent?.data)
+        return <p>Cargando...</p>
 
     return (
         <PageContainer className={styles.carta_container}>
+            <div className={styles.controler_audio}>
+                {tagsContent.data.map(
+                    ({ attributes: { label, tag_id }, id }) => (
+                        <a key={`${tag_id}-${id}`} href={`#${tag_id}`}>
+                            {label}
+                        </a>
+                    )
+                )}
+            </div>
             <span className={`${textsStyles.normal} ${styles.time_stamp}`}>
                 {content?.data.attributes.more_content[0].timestamp?.replace(
                     '\\n',

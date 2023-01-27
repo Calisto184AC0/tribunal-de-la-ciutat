@@ -1,6 +1,7 @@
 import { MarkdownRender } from '@/components/_general'
 import { Heading, Text } from '@/components/_ui'
 import PageContainer from '@/components/_ui/PageContainer'
+import { useIsMobile } from '@/contexts/isMobileContext'
 import useStrapi from '@/hooks/useStrapi'
 import Image from 'next/image'
 import styles from './styles.module.scss'
@@ -8,14 +9,17 @@ import { Informacio } from './type'
 
 const Informacio = () => {
     const { content } = useStrapi<Informacio>('informacio')
+    const isMobile = useIsMobile()
 
     if (!content?.data) return <p>Cargando...</p>
 
     return (
         <PageContainer className={styles.container}>
-            <Heading tag='h1' type='h4'>
-                {content.data.attributes.title}
-            </Heading>
+            {!isMobile && (
+                <Heading tag='h1' type='h4'>
+                    {content.data.attributes.title}
+                </Heading>
+            )}
             <MarkdownRender
                 source={content.data.attributes.content}
                 components={{

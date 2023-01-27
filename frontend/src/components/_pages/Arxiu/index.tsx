@@ -1,6 +1,7 @@
 import MarkdownRender from '@/components/_general/MarkdownRender'
 import { Button, Heading } from '@/components/_ui'
 import PageContainer from '@/components/_ui/PageContainer'
+import { useIsMobile } from '@/contexts/isMobileContext'
 import { PageId } from '@/hooks/useContentReducer/types'
 import useStrapi from '@/hooks/useStrapi'
 import { Fragment, ReactNode, useEffect, useState } from 'react'
@@ -17,6 +18,7 @@ interface ArxiuProps {
 const Arxiu = ({ transition, returnHandler }: ArxiuProps) => {
     const { content: arxiuContent } = useStrapi<Arxiu>('arxiu')
     const { content: testimonisContent } = useStrapi<Testimonis>('testimonis')
+    const isMobile = useIsMobile()
 
     const [tags, setTags] = useState<TestimonitagsAttributes[][]>([])
     const [selectedTag, setSelectedTag] = useState<string[]>([])
@@ -73,6 +75,11 @@ const Arxiu = ({ transition, returnHandler }: ArxiuProps) => {
 
     return (
         <PageContainer className={styles.arxiu}>
+            {!isMobile && (
+                <Heading tag='h1' type='h4'>
+                    {arxiuContent.data.attributes.title}
+                </Heading>
+            )}
             <MarkdownRender
                 source={arxiuContent?.data.attributes.introduction}
                 components={{

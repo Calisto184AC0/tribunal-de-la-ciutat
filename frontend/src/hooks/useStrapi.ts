@@ -11,6 +11,9 @@ const contentMap = {
         '/conversa?populate%5Bvideo%5D=*&populate%5Bdownload%5D%5Bpopulate%5D=*',
     documentacio: '/documentacio?populate%5Bdownloads%5D%5Bpopulate%5D=*',
     informacio: '/informacio?populate%5Bmore_content%5D%5Bpopulate%5D=*',
+    footer: '/footer?populate=*',
+    audios: '/home-audio?populate=*',
+    chapter_tags: '/chapter-tags',
 }
 
 const STRAPI_URL_BASE = 'http://tribunal.vigla.city/strapi/api'
@@ -23,6 +26,9 @@ type ContentId =
     | 'documentacio'
     | 'informacio'
     | 'testimonis'
+    | 'footer'
+    | 'audios'
+    | 'chapter_tags'
 
 const useStrapi = <T>(contentId: ContentId): FetchReturn<T> => {
     const { content, error } = useFetch<T>(
