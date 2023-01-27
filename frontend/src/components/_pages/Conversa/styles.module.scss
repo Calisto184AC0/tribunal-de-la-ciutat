@@ -5,6 +5,10 @@
 
     padding: 40px 30px 120px;
 
+    @media (width <= 768px) {
+        padding-top: 120px !important;
+    }
+
     background-color: var(--salmon);
     color: var(--purple);
 

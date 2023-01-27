@@ -1,3 +1,4 @@
+import { MarkdownRender } from '@/components/_general'
 import { Button, Heading } from '@/components/_ui'
 import Footer from '@/components/_ui/Footer'
 import PageContainer from '@/components/_ui/PageContainer'
@@ -80,14 +81,9 @@ const Arxiu = ({ transition, returnHandler }: ArxiuProps) => {
                     {arxiuContent.data.attributes.title}
                 </Heading>
             )}
-            {/* <MarkdownRender
+            <MarkdownRender
                 source={arxiuContent?.data.attributes.introduction}
-                components={{
-                    h1: ({ node, ...props }) => (
-                        <Heading type='h4' tag='h1' {...props} />
-                    ),
-                }}
-            /> */}
+            />
             <div className={styles.tags_container}>
                 {tags?.map((tagGroup, index) => (
                     <div className={styles.tag_group} key={index}>

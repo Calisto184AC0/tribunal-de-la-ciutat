@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 36px;
 
+    margin: 0 -30px 40px;
     padding: 120px 30px 40px;
 
     background-color: var(--gray);
@@ -10,18 +11,13 @@
 
     .p_block {
         display: block;
-        max-width: 300px;
-        width: 100px;
+        max-width: 490px;
+        width: 100%;
     }
 
     .logos {
         display: flex;
         justify-content: space-between;
-
-        img {
-            width: 100%;
-            height: auto;
-        }
 
         .logos_izq {
             display: flex;
