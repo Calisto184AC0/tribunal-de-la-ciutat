@@ -13,7 +13,7 @@ const useCarrusel = () => {
                     method: 'GET',
                     headers: {
                         Authorization:
-                            'Bearer 776aedf04518019ca4c83b230efbb451ce469f3ea52566ccef3cc0b9ec92668dc1e586bbec1c915262727242be7de57b078ec3ed1deeadb3706d23f59e52d8c3e55b8e232a2047b7cc55218477c9da63e4db4d700a85b7aa59c087bb75dd5d7e3627f9bf5d20d5d20b2d51be382704a7e48a36db333b3f0ed34891081a94b170',
+                            'Bearer ab2f3b034c50a077efb61793bbd63464710b149a1f6f241e74caeef6b9c4243cde00c3d542ee5d20fa0a1331770187595612b4abed138781ff4abf9da763ba53ee6585c5b21809c824e6f96c5395abb3ae029a0adcabd539de59b7572a3da1c62214f73d2ce2eafae5e8ea61daa562d183c21ffd1c8244cedea683d071a41c65',
                     },
                 }
             )
